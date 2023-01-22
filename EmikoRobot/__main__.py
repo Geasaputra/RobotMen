@@ -83,27 +83,31 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
+𝚂𝙰𝚈𝙰 𝙰𝙳𝙰𝙻𝙰𝙷 𝙱𝙾𝚃 𝙼𝚄𝚂𝙸𝙲 𝙳𝙰𝙽 𝙼𝙰𝙽𝙰𝙶𝙴, 𝚂𝙰𝚈𝙰 𝙱𝙸𝚂𝙰 𝙼𝙴𝙼𝚄𝚃𝙰𝚁 𝙼𝚄𝚂𝙸𝙲 𝙳𝙸 𝙾𝙱𝚁𝙾𝙻𝙰𝙽 𝚂𝚄𝙰𝚁𝙰 𝙰𝙽𝙳𝙰 𝙳𝙰𝙽 𝙹𝚄𝙶𝙰 𝙱𝙸𝚂𝙰 𝙼𝙴𝙽𝙶𝙴𝙻𝙾𝙻𝙰 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳𝙰
+──────────────────────── 
+ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ ɪɴꜰᴏʀᴍᴀsɪ ᴛᴇɴᴛᴀɴɢ ᴍᴏᴅᴜʟ ᴅᴀɴ ᴘᴇʀɪɴᴛᴀʜ sᴀʏᴀ
 ────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
+✮ *ᴡᴀᴋᴛᴜ ᴀᴋᴛɪꜰ:* `{}`
+✮ *ᴘᴇɴɢɢᴜɴᴀ:* `{}`
+✮ *ᴏʙʀᴏʟᴀɴ:* `{}`
 ────────────────────────
-✪ Hit /help to see my available commands.
-"""
+ɪɴɢɪɴ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ᴀɴᴅᴀ? ᴄᴜᴋᴜᴘ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪ ʙᴀᴡᴀʜ!.
 
 buttons = [
     [
-        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name}", callback_data="emiko_"),
+        InlineKeyboardButton(text=f"About", callback_data="emiko_"),
     ],
     [
         InlineKeyboardButton(text="Get Help", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Try inline!​​", switch_inline_query_current_chat=""
+            text="Support", url=f"https://t.me/PCOgrup"
         ),
     ],
     [
         InlineKeyboardButton(
             text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+        InlineKeyboardButton(
+            text="Donasi", callback_data="donasi_",
     ],
 ]
 
@@ -474,6 +478,26 @@ def emiko_about_callback(update, context):
             ),
         )
 
+def donasi_about_callback(update, context):
+    query = update.callback_query
+    id query.data == "donasi_":
+          query.massage.edit_text(
+              text="BAGI KAKIAN YANG INGIN BERDONASI UNTUK MUSIC CENTER KALIAN BISA BERDONASI LEWAT:"
+              "/n/n💵 DANA/OVO: 087861355827"
+              parse_mode=ParseMode.HTML,
+              reply_markup=InlineKeyboardMarkup(
+              [
+               [
+                  InlineKeyboardButton(text="Support", url=f"https://t.me/PCOgrup"),
+                  InlineKeyboardButton(text="Channel", url=f"https://t.me/jrtnhati"),
+              ],
+              [
+                 InlineKeyboardButton(text="Developer", url=f"https:t.me/Mamenkuy"),
+              ]
+             ]
+         ),
+      )
+      
 def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
@@ -811,6 +835,10 @@ def main():
 
     about_callback_handler = CallbackQueryHandler(
         emiko_about_callback, pattern=r"emiko_", run_async=True
+    )
+ 
+    about_callback_handler = CallbackQueryHandler(
+        donasi_about_callback, pattern=r"donasi_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
