@@ -194,7 +194,7 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-    ERROR_LOG = Config.ERROR_LOGS
+    ERROR_LOG = Config.ERROR_LOG
     DB_URL = Config.SQLALCHEMY_DATABASE_URI
     MONGO_DB_URI = Config.MONGO_DB_URI
     MONGO_DB = Config.MONGO_DB
