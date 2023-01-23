@@ -12,8 +12,7 @@ import telegram.ext as tg
 
 from inspect import getfullargspec
 from aiohttp import ClientSession
-from Python_ARQ import ARQ 
-from dotenv import load_dotenv
+from Python_ARQ import ARQ
 from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 from telethon import TelegramClient 
 
