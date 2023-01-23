@@ -141,7 +141,7 @@ if ENV:
     BOT_ID = int(os.environ.get("BOT_ID", "5909315261"))
     ARQ_API_URL = os.environ.get("ARQ_API_URL", "http://arq.hamker.dev")
     ARQ_API_KEY = os.environ.get("ARQ_API_KEY", None)
-    ERROR_LOGS = os.environ.get("ERROR_LOGS", -1001578091827)
+    ERROR_LOG = os.environ.get("ERROR_LOGS", -1001578091827)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     SUPPORT_CHANNEL = os.environ.get("SUPPORT_CHANNEL", "")
 
