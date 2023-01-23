@@ -12,34 +12,34 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 123456  # integer value, dont use ""
-    API_HASH = "awoo"
-    TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 1606221784  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    API_ID = 13180093  # integer value, dont use ""
+    API_HASH = "74c7a8240aa33b65a95ccb322d7e488e"
+    TOKEN = "5386612011:AAHCVphDvVV01KO6ShcipTBkOTjepcZq0ac"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    OWNER_ID = 2045556427  # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OPENWEATHERMAP_ID = 22322
-    OWNER_USERNAME = "Scotchers"
-    BOT_USERNAME = "EmiexRobot"
-    SUPPORT_CHAT = "FumikaSupportGroup"  # Your own group for support, do not add the @
+    OWNER_USERNAME = "Mamenkuy"
+    BOT_USERNAME = "Pusatmusic_bot"
+    SUPPORT_CHAT = "PCOgrup"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001748076180
+        -1001790099997
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001748076180
+        -1001790099997
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
-    ERROR_LOG = -1001657496255
+    ERROR_LOG = -1001790099997
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
-    MONGO_DB_URI = "mongo+srv"  # needed for any database modules
+    SQLALCHEMY_DATABASE_URI = "postgresql://vrppjegb:DtFdaiOR9uEPJ2QepOYu2EPDo_YrHmcu@lallah.db.elephantsql.com/vrppjegb"  # needed for any database modules
+    MONGO_DB_URI = "mongodb+srv://FileBot:FileBot@filebot.jx2r1lb.mongodb.net/?retryWrites=true&w=majority"  # needed for any database modules
     ARQ_API_URL = "https://arq.hamker.in"
-    ARQ_API_KEY = "BCYKVF-KYQWFM-JCMORU-RZWOFQ-ARQ"
+    ARQ_API_KEY = "KKPKWW-MXCUUJ-JRHOAI-OKYOYC-ARQ"
     BOT_API_URL = "https://api.telegram.org/bot"
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
     INFOPIC = True
     URL = None
-    SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
+    SPAMWATCH_API = "ZW0DIAZN0B8_vh4pDONiwEPQL0fWiNyymyUJpfWlWbYdgNuNWO9VVtLKHEIAv3cg"  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
 
     # OPTIONAL
@@ -63,7 +63,7 @@ class Config(object):
     BAN_STICKER = ""  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
     ALLOW_EXCL = True  # Allow ! commands as well as / (Leave this to true so that blacklist can work)
     CASH_API_KEY = (
-        "awoo"  # Get your API key from https://www.alphavantage.co/support/#api-key
+        "QE0579DEE7JC7AD5"  # Get your API key from https://www.alphavantage.co/support/#api-key
     )
     TIME_API_KEY = "awoo"  # Get your API key from https://timezonedb.com/api
     WALL_API = (
