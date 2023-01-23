@@ -143,7 +143,6 @@ if ENV:
     ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "KKPKWW-MXCUUJ-JRHOAI-OKYOYC-ARQ")
     ERROR_LOG = os.environ.get("ERROR_LOG", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    CHANNEL = os.environ.get("CHANNEL", "jrtnhati")
 
     try:
         BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}
@@ -209,7 +208,6 @@ else:
     NO_LOAD = Config.NO_LOAD
     HEROKU_API_KEY = Config.HEROKU_API_KEY
     HEROKU_APP_NAME = Config.HEROKU_APP_NAME
-    CHANNEL = Config.CHANNEL 
     DEL_CMDS = Config.DEL_CMDS
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
