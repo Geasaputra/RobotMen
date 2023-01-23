@@ -266,6 +266,10 @@ aiohttpsession = ClientSession()
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
+BOT_ID = dispatcher.bot.id
+BOT_USERNAME = dispatcher.bot.username
+BOT_NAME = dispatcher.bot.first_name
+
 ubot2 = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
 try:
     ubot2.start()
@@ -317,7 +321,7 @@ async def eor(msg: Message, **kwargs):
     return await func(**{k: v for k, v in kwargs.items() if k in spec})
 
 try:
-    from PrimeMega.antispam import antispam_restrict_user, antispam_cek_user, detect_user
+    from EmikoRobot.antispam import antispam_restrict_user, antispam_cek_user, detect_user
 
     LOGGER.info(
         f"{dispatcher.bot.first_name} Successfull loaded antispam to the system"
