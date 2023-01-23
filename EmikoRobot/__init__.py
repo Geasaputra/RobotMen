@@ -138,12 +138,12 @@ if ENV:
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
     CF_API_KEY = os.environ.get("CF_API_KEY", None)
     WELCOME_DELAY_KICK_SEC = os.environ.get("WELCOME_DELAY_KICL_SEC", None)
-    BOT_ID = int(os.environ.get("BOT_ID", "5909315261"))
+    BOT_ID = int(os.environ.get("BOT_ID", "None"))
     ARQ_API_URL = os.environ.get("ARQ_API_URL", "http://arq.hamker.dev")
-    ARQ_API_KEY = os.environ.get("ARQ_API_KEY", None)
-    ERROR_LOG = os.environ.get("ERROR_LOGS", -1001578091827)
+    ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "KKPKWW-MXCUUJ-JRHOAI-OKYOYC-ARQ")
+    ERROR_LOG = os.environ.get("ERROR_LOG", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    SUPPORT_CHANNEL = os.environ.get("SUPPORT_CHANNEL", "")
+    SUPPORT_CHANNEL = os.environ.get("SUPPORT_CHANNEL", "jrtnhati")
 
     try:
         BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}
@@ -238,12 +238,12 @@ else:
                
 # If you forking dont remove this id, just add your id. LOL...
 
-DRAGONS.add(OWNER_ID)
-DRAGONS.add(1784179805)
-DRAGONS.add(1732814103)
-DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1784179805)
-DEV_USERS.add(1866066766)
+DRAGONS = list(DRAGONS) + list(DEV_USERS)
+DEV_USERS = list(DEV_USERS)
+WOLVES = list(WOLVES)
+DEMONS = list(DEMONS)
+TIGERS = list(TIGERS)
+
 
 
 if not SPAMWATCH_API:
@@ -369,32 +369,3 @@ def spamcheck(func):
             dispatcher.bot.leaveChat(chat.id)
             return False
         return func(update, context, *args, **kwargs)
-
-    return 
-
-def spamfilters(text, user_id, chat_id):
-    # print("{} | {} | {}".format(text, user_id, chat_id))
-    if int(user_id) not in SPAMMERS:
-        return False
-
-    print("This user is a spammer!")
-    return True
-
-DRAGONS = list(DRAGONS) + list(DEV_USERS)
-DEV_USERS = list(DEV_USERS)
-WOLVES = list(WOLVES)
-DEMONS = list(DEMONS)
-TIGERS = list(TIGERS)
-SPAMMERS = list(SPAMMERS)
-
-# Load at end to ensure all prev variables have been set
-from EmikoRobot.modules.helper_funcs.handlers import (
-    CustomCommandHandler,
-    CustomMessageHandler,
-    CustomRegexHandler,
-)
-
-# make sure the regex handler can take extra kwargs
-tg.RegexHandler = CustomRegexHandler
-tg.CommandHandler = CustomCommandHandler
-tg.MessageHandler = CustomMessageHandler
