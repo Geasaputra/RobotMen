@@ -330,7 +330,7 @@ from EmikoRobot.modules.helper_funcs.handlers import (
 # make sure the regex handler can take extra kwargs
 tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
-tg.MessageHandler = CustomMessageHandle
+tg.MessageHandler = CustomMessageHandler
 
 try:
     from EmikoRobot.antispam import antispam_restrict_user, antispam_cek_user, detect_user
