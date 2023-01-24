@@ -376,8 +376,8 @@ def cokbun_ngocok_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [ 
-                     InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛs", url="https://t.me/genoosss"),
-                     InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟs", url="https://t.me/genoosss"), 
+                     InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/PCOgrup"),
+                     InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/jrtnhti"), 
                   ],
                   [
                      InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="source_back"), 
@@ -390,11 +390,8 @@ def waduh_pusing_callback(update, context):
     query = update.callback_query
     if query.data == "waduh_": 
         query.message.edit_text( 
-            text=f"🎺 ᴘᴇʀʜᴀᴛɪᴀɴ!."
-            "\n\n❉ ʙᴜᴀᴛ ᴋᴀʟɪᴀɴ ʏᴀɴɢ ʟᴀɢɪ ɴʏᴀʀɪ ʀᴇᴘᴏꜱɪᴛᴏʀʏ ʙᴏᴛ ᴍᴀɴᴀɢᴇ ʙᴇꜱᴇʀᴛᴀ ʀᴇᴘᴏꜱɪᴛᴏʀʏ ᴍᴜꜱɪᴄ ꜱᴇᴘᴇʀᴛɪ ʙᴏᴛ⬇️."
-            "\n\n❉ [ᴡɪʙᴜ ᴍᴀɴᴀɢᴇ ʀᴏʙᴏᴛ](https://t.me/WibuXRobot)." 
-            "\n\n❉ sᴀʏᴀ ᴍᴇɴᴊᴜᴀʟ ʀᴇᴘᴏ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴀ ᴍᴀɴᴀɢᴇ ʀᴏʙᴏᴛ." 
-            "\n\n❉ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ ☎️.",
+            text=f"ᴘᴇʀʜᴀᴛɪᴀɴ!."
+            "\n\n ᴅɪʟᴀʀᴀɴɢ ᴋᴇʀᴀꜱ ᴍᴇɴʏᴀʟᴀʜɢᴜɴᴀᴋᴀɴ ʙᴏᴛ",
             parse_mode=ParseMode.MARKDOWN, 
             disable_web_page_preview=True, 
             reply_markup=InlineKeyboardMarkup( 
@@ -576,8 +573,8 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text=f"*ʙᴀɢɪ ʏᴀɴɢ ɪɴɢɪɴ ʙᴇʀᴅᴏɴᴀsɪ sᴇʙᴀɢᴀɪ ᴜᴄᴀᴘᴀɴ ᴛᴇʀɪᴍᴀ ᴋᴀsɪʜ ᴋᴇᴘᴀᴅᴀ ᴘᴇɴᴄɪᴘᴛᴀ ᴡɪʙᴜ.*"
-            "\n\n*ᴠɪᴀ ᴏᴠᴏ +6287845681216.*"
+            text=f"*ʙᴀɢɪ ʏᴀɴɢ ɪɴɢɪɴ ʙᴇʀᴅᴏɴᴀsɪ sᴇʙᴀɢᴀɪ ᴜᴄᴀᴘᴀɴ ᴛᴇʀɪᴍᴀ ᴋᴀsɪʜ ᴋᴇᴘᴀᴅᴀ ᴘᴇɴᴄɪᴘᴛᴀ ᴋᴀʟɪᴀɴ ʙɪꜱᴀ ʙᴇʀᴅᴏɴᴀꜱɪ ʟᴇᴡᴀᴛ:*"
+            "\n\n*ᴠɪᴀ ᴏᴠᴏ ᴅᴀɴ ᴅᴀɴᴀ 087861355827*"
             "\n\n*ᴜɴᴛᴜᴋ ᴛʀᴀɴsᴀᴋsɪ ʟᴀɪɴɴʏᴀ, sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ ᴘᴇᴍɪʟɪᴋ ᴀᴛᴀᴜ ᴋʟɪᴋ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ.*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -585,9 +582,9 @@ def emiko_about_callback(update, context):
                 [
                  [
                     
-                    InlineKeyboardButton(text="🎩 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="http://t.me/xdr0id"),
+                    InlineKeyboardButton(text="🎩 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="http://t.me/Mamenkuy"),
                  
-                    InlineKeyboardButton(text="🎓 ᴍᴀɪɴᴛᴀɪɴᴇʀ", url="https://t.me/Todoshotou"),
+                    InlineKeyboardButton(text="🎓 ᴍᴀɪɴᴛᴀɪɴᴇʀ", url="https://t.me/Mamenkuy"),
                  ],
                  [
                     InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="source_back"),
