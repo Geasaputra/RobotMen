@@ -7,7 +7,6 @@ import asyncio
 import time
 import spamwatch 
 import random 
-
 import telegram.ext as tg
 
 from inspect import getfullargspec
@@ -15,19 +14,12 @@ from aiohttp import ClientSession
 from Python_ARQ import ARQ
 from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 from telethon import TelegramClient 
-
-
 from telethon.sessions import StringSession 
-
-
 from telethon.sessions import MemorySession 
 from telethon import TelegramClient, events 
-from telethon.sessions import MemorySession
 from pyrogram.types import Message 
-
 from pyrogram import Client, errors 
 from pymongo import MongoClient 
-
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
 from pyrogram.types import Chat, User
 from ptbcontrib.postgres_persistence import PostgresPersistence
