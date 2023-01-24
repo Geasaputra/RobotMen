@@ -137,7 +137,6 @@ if ENV:
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
     CF_API_KEY = os.environ.get("CF_API_KEY", None)
     WELCOME_DELAY_KICK_SEC = os.environ.get("WELCOME_DELAY_KICL_SEC", None)
-    BOT_ID = int(os.environ.get("BOT_ID", "None"))
     ARQ_API_URL = os.environ.get("ARQ_API_URL", "http://arq.hamker.dev")
     ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "KKPKWW-MXCUUJ-JRHOAI-OKYOYC-ARQ")
     ERROR_LOG = os.environ.get("ERROR_LOG", None)
