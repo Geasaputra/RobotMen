@@ -269,7 +269,7 @@ BOT_ID = dispatcher.bot.id
 BOT_USERNAME = dispatcher.bot.username
 BOT_NAME = dispatcher.bot.first_name
 
-ubot2 = TelegramClient(MemorySession(), API_ID, API_HASH)
+ubot2 = TelegramClient(StringSession(), API_ID, API_HASH)
 try:
     ubot2.start()
 except BaseException:
