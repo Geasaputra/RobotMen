@@ -377,7 +377,7 @@ def cokbun_ngocok_callback(update, context):
                 [
                  [ 
                      InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/PCOgrup"),
-                     InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/jrtnhti"), 
+                     InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/jrtnhati"), 
                   ],
                   [
                      InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="source_back"), 
