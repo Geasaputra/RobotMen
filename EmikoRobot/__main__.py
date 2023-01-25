@@ -220,7 +220,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name 
             update.effective_message.reply_sticker( 
-              "CAACAgUAAx0CcBLDRQACDypjsFD102Lw6KANWubncdCexqDe8AACrgYAAiOOwVULrAb4hc__uS0E", 
+              "CAACAgUAAxkBAAIK5GPRAQRiHHOI_RsjwCENVMVo22laAAKvCAACUySBVv7f6ofsfxvlLQQ", 
            )
             first_name = update.effective_user.first_name
             uptime = get_readable_time((time.time() - StartTime))
@@ -987,7 +987,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Hi, i'm alive.",
+                "👋 Hi, Saya telah aktif",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
