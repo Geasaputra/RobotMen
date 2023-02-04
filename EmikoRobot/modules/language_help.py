@@ -1,4 +1,4 @@
-from EmikoRobot.modules.language import gs
+from EmikoRobot.language import gs
 
 def helps(chat): 
     return gs(chat, "lang_help") 
