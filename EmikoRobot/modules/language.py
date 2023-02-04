@@ -9,7 +9,6 @@ from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 
 from EmikoRobot import dispatcher
 from EmikoRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from EmikoRobot.language import get_string, get_languages, get_language
 
 
 
