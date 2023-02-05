@@ -220,11 +220,11 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name 
             ler = update.effective_message.reply_text( 
-            time.sleep(0,4)
+            time.sleep(0.4)
             ler.edit_text("⚡")
-            time.sleep(0,4)
+            time.sleep(0.4)
             ler.edit.text("WELCOME....")
-            time.sleep(0,4)
+            time.sleep(0.4)
             ler.delete()
            )
             first_name = update.effective_user.first_name
