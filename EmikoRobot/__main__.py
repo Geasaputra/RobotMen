@@ -218,18 +218,20 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            first_name = update.effective_user.first_name 
-            ler = update.effective_message.reply_text(
-            edit_text("⚡")
-            time.sleep(0.4)
-            edit.text("WELCOME....")
-            time.sleep(0.4)
-            delete()
-           )
             first_name = update.effective_user.first_name
+            usr = update.effective_user
             uptime = get_readable_time((time.time() - StartTime))
+            ler = update.effective_message.reply_text(
+                PM_START_TEXT.format(Hallo usr.first_name, parse_mode=ParseMode.MARKDOWN
+            )
+            time.sleep(0.4)
+            ler.edit_text("⚡")
+            time.sleep(0.5)
+            ler.edit_text("WELCOME....")
+            time.sleep(0.4)
+            ler.delete()
             update.effective_message.reply_text(
-                PM_START_TEXT.format(
+                text=gs(chat.id, "pm_start_text").format(
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
