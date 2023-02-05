@@ -222,7 +222,7 @@ def start(update: Update, context: CallbackContext):
             usr = update.effective_user
             uptime = get_readable_time((time.time() - StartTime))
             ler = update.effective_message.reply_text(
-                PM_START_TEXT.format(Hallo usr.first_name), parse_mode=ParseMode.MARKDOWN
+                PM_START_TEXT.format(Hallo usr.first_name),
             )
             time.sleep(0.4)
             ler.edit_text("⚡")
