@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name 
-           update.effective_message.reply_text(
+            ler = update.effective_message.reply_text(
             edit_text("⚡")
             time.sleep(0.4)
             edit.text("WELCOME....")
