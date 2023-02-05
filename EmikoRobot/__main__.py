@@ -221,15 +221,15 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
             usr = update.effective_user
             uptime = get_readable_time((time.time() - StartTime))
-            lol = update.effective_message.reply_text(
-                PM_START_TEXT.format(Hallo usr.first_name, parse_mode=ParseMode.MARKDOWN
+            ler = update.effective_message.reply_text(
+                PM_START_TEXT.format(Hallo usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.4)
-            lol.edit_text("⚡")
+            ler.edit_text("⚡")
             time.sleep(0.5)
-            lol.edit_text("WELCOME....")
+            ler.edit_text("WELCOME....")
             time.sleep(0.4)
-            lol.delete()
+            ler.delete()
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
                     escape_markdown(first_name),
