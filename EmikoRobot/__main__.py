@@ -219,8 +219,15 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name 
-            update.effective_message.reply_sticker( 
-              "CAACAgUAAxkBAAIK5GPRAQRiHHOI_RsjwCENVMVo22laAAKvCAACUySBVv7f6ofsfxvlLQQ", 
+            ler = update.effective_message.reply_text( 
+                PM_START_TEX.format(Hallo usr.first_name), parse_mode=ParseMode.MARKDOWN
+            )
+            time.sleep(0,4)
+            ler.edit_text("⚡")
+            time.sleep(0,4)
+            ler.edit.text("WELCOME....")
+            time.sleep(0,4)
+            ler.delete()
            )
             first_name = update.effective_user.first_name
             uptime = get_readable_time((time.time() - StartTime))
