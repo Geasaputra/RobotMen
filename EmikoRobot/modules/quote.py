@@ -1,4 +1,5 @@
-t json
+import base64
+import json
 import os
 from asyncio import sleep
 from json.decoder import JSONDecodeError
