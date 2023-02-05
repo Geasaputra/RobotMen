@@ -220,7 +220,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name 
             ler = update.effective_message.reply_text( 
-                PM_START_TEX.format(Hallo usr.first_name), parse_mode=ParseMode.MARKDOWN
+                PM_START_TEXT.format(Hallo usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0,4)
             ler.edit_text("⚡")
