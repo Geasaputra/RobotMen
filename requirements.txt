@@ -85,3 +85,7 @@ fuzzysearch
 img2pdf
 multicolorcaptcha
 git+https://github.com/python-telegram-bot/ptbcontrib.git
+requests==2.28.1
+Flask==2.2.2
+beautifulsoup4==4.11.1
+python-dotenv==0.21.0
