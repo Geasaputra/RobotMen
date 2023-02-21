@@ -4,7 +4,6 @@ from datetime import datetime
 from EmikoRobot.modules import downloader
 from dotenv import dotenv_values
 
-token_bot = dotenv_values()['token_bot']
 api = "https://api.telegram.org/bot" + token_bot
 update_id = 0
 
