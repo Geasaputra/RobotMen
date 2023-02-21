@@ -554,7 +554,7 @@ GBAN_LIST = CommandHandler("gbanlist", gbanlist, run_async=True)
 GBAN_STATUS = CommandHandler(
     "antispam", gbanstat, filters=Filters.chat_type.groups, run_async=True
 )
-BAN_ENFORCER = MessageHandler(
+GBAN_ENFORCER = MessageHandler(
     Filters.all & Filters.chat_type.groups, enforce_gban, run_async=True
 )
 
