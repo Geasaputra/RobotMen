@@ -4,10 +4,6 @@ from datetime import datetime
 from EmikoRobot.modules import downloader
 from dotenv import dotenv_values
 
-bot_token = dotenv_values()['bot_token']
-api = "https://api.telegram.org/bot" + bot_token
-update_id = 0
-
 
 def SendVideo(userid, msgid):
     tg_url = api + "/sendvideo"
