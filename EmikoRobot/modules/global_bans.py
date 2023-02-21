@@ -548,23 +548,23 @@ Note: Users can appeal gbans or report spammers at @{SUPPORT_CHAT}
 ❂ /setfloodmode <action type>: Choose which action to take on a user who has been flooding. Options: ban/kick/mute/tban/tmute.
 """
 
-CGBAN_HANDLER = CommandHandler("cgban", cgban, run_async=True)
-CUNGBAN_HANDLER = CommandHandler("cungban", cungban, run_async=True)
-CGBAN_LIST = CommandHandler("cgbanlist", cgbanlist, run_async=True)
-CGBAN_STATUS = CommandHandler(
+GBAN_HANDLER = CommandHandler("gban", gban, run_async=True)
+UNGBAN_HANDLER = CommandHandler("ungban", ungban, run_async=True)
+GBAN_LIST = CommandHandler("gbanlist", gbanlist, run_async=True)
+GBAN_STATUS = CommandHandler(
     "antispam", gbanstat, filters=Filters.chat_type.groups, run_async=True
 )
-GBAN_ENFORCER = MessageHandler(
+BAN_ENFORCER = MessageHandler(
     Filters.all & Filters.chat_type.groups, enforce_gban, run_async=True
 )
 
-dispatcher.add_handler(CGBAN_HANDLER)
-dispatcher.add_handler(CUNGBAN_HANDLER)
-dispatcher.add_handler(CGBAN_LIST)
-dispatcher.add_handler(CGBAN_STATUS)
+dispatcher.add_handler(GBAN_HANDLER)
+dispatcher.add_handler(UNGBAN_HANDLER)
+dispatcher.add_handler(GBAN_LIST)
+dispatcher.add_handler(GBAN_STATUS)
 
 __mod_name__ = "Anti-Spam"
-__handlers__ = [CGBAN_HANDLER, CUNGBAN_HANDLER, CGBAN_LIST, CGBAN_STATUS]
+__handlers__ = [GBAN_HANDLER, UNGBAN_HANDLER, GBAN_LIST, GBAN_STATUS]
 
 if STRICT_GBAN:  # enforce GBANS if this is set
     dispatcher.add_handler(GBAN_ENFORCER, GBAN_ENFORCE_GROUP)
