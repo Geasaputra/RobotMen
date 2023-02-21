@@ -548,9 +548,9 @@ Note: Users can appeal gbans or report spammers at @{SUPPORT_CHAT}
 ❂ /setfloodmode <action type>: Choose which action to take on a user who has been flooding. Options: ban/kick/mute/tban/tmute.
 """
 
-GBAN_HANDLER = CommandHandler("gban", gban, run_async=True)
-UNGBAN_HANDLER = CommandHandler("ungban", ungban, run_async=True)
-GBAN_LIST = CommandHandler("gbanlist", gbanlist, run_async=True)
+GBAN_HANDLER = CommandHandler("cgban", cgban, run_async=True)
+UNGBAN_HANDLER = CommandHandler("cungban", cungban, run_async=True)
+GBAN_LIST = CommandHandler("cgbanlist", cgbanlist, run_async=True)
 GBAN_STATUS = CommandHandler(
     "antispam", gbanstat, filters=Filters.chat_type.groups, run_async=True
 )
