@@ -88,8 +88,9 @@ requests==2.28.1
 Flask==2.2.2
 beautifulsoup4==4.11.1
 python-dotenv==0.21.0
-youtube_dl
+youtube-dl
 pytube
 google-api-python-client
-git+https://github.com/yt-dlp/yt-dlp/latest
+git+https://github.com/yt-dlp/yt-dlp
+yt-dl-U
 
