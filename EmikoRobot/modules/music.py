@@ -1,22 +1,3 @@
-
-nero-chi
-/
-EmikoRobot
-Public
-Code
-Issues
-2
-Pull requests
-5
-Actions
-Projects
-Security
-Insights
-EmikoRobot/EmikoRobot/modules/music.py
-@nero-chi
-nero-chi none
- 1 contributor
-244 lines (228 sloc)  7.64 KB
 from __future__ import unicode_literals
 import asyncio
 import math
