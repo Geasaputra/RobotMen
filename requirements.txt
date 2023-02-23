@@ -45,7 +45,6 @@ pygithub
 TgCrypto
 pyrogram==2.0.41
 PyDictionary
-git+https://github.com/Sorrybabe/downloader
 youtube_search_python==1.4.9
 youtube_search
 lyrics_extractor
@@ -92,5 +91,5 @@ python-dotenv==0.21.0
 youtube_dl
 pytube
 google-api-python-client
-git+https://github.com/yt-dlp/yt-dlp.git
+git+https://github.com/yt-dlp/yt-dlp
 
