@@ -92,5 +92,5 @@ python-dotenv==0.21.0
 youtube_dl
 pytube
 google-api-python-client
-git+https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+git+https://github.com/yt-dlp/yt-dlp.git
 
