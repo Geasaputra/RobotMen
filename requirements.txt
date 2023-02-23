@@ -91,5 +91,4 @@ python-dotenv==0.21.0
 youtube-dl
 pytube
 google-api-python-client
-git+https://github.com/ytdl-org
-
+git+https://github.com/ytdl-org/youtube-dl
