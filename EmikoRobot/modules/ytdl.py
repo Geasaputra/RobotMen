@@ -1,5 +1,6 @@
 import os
 import time
+import yt_dlp as youtube_dl
 
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
