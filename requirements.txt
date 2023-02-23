@@ -92,5 +92,5 @@ youtube-dl
 pytube
 google-api-python-client
 git+https://github.com/yt-dlp/yt-dlp
-yt-dl-U
+git+https://github.com/ytdl-org
 
