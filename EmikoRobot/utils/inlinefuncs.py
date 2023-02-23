@@ -35,7 +35,6 @@ from EmikoRobot.utils.pluginhelper import convert_seconds_to_minutes as time_con
 from EmikoRobot.services.tasks import _get_tasks_text, all_tasks, rm_task
 from EmikoRobot.services.types import InlineQueryResultCachedDocument
 from EmikoRobot.modules.info import get_chat_info, get_user_info
-from EmikoRobot.modules.music import download_youtube_audio
 from EmikoRobot.utils.functions import test_speedtest
 from EmikoRobot.utils.pastebin import paste
 
