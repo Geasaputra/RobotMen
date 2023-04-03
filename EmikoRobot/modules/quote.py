@@ -1,4 +1,5 @@
 import base64
+import requests
 import json
 import os
 from asyncio import sleep
@@ -42,7 +43,7 @@ except ImportError:
 
 
 class Quotly:
-    _API = "https://bot.lyo.su/quote/generate"
+    _API = "https://bot.lyo.su/fstikbot/generate"
     _entities = {
         types.MessageEntityPhone: "phone_number",
         types.MessageEntityMention: "mention",
