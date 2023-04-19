@@ -1,6 +1,6 @@
 from pyrogram import filters
 
-from EmikoRobot import BOT_USERNAME, arq, pgram
+from EmikoRobot import BOT_USERNAME, arq
 
 
 @pgram.on_message(filters.command("arq"))
