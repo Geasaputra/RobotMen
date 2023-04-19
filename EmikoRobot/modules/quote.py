@@ -4,7 +4,7 @@ from traceback import format_exc
 from pyrogram import filters
 from pyrogram.types import Message
 
-from EmikoRobot import arq, pgram
+from EmikoRobot import arq
 from EmikoRobot.utils.errors import capture_err
 
 
