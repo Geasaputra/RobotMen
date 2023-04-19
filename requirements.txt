@@ -93,3 +93,4 @@ pytube
 google-api-python-client
 git+https://github.com/ytdl-org/youtube-dl
 yt-dlp
+webcolors==1.12
