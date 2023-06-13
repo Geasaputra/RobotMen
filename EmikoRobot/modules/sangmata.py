@@ -1,12 +1,18 @@
-from telethon.errors.rpcerrorlist import YouBlockedUserError
+from pyrogram import filters
+
+from pyrogram.errors import YouBlockedUser
+
+from pyrogram.raw.functions.messages import DeleteHistory
+
 from EmikoRobot import telethn as tbot
 from EmikoRobot.events import register
 from EmikoRobot import ubot2 as ubot
 from asyncio.exceptions import TimeoutError
 
 
-@register(pattern="^/sg ?(.*)")
-@register(pattern="^/check_name ?(.*)")
+@Client.on_message(filters.user(OWNER._ID) &
+filters.command("sg", "/"))
+@Client.on_message(filters.me & filters.command("sg",PERFIX))
 async def lastname(steal):
     steal.pattern_match.group(1)
     puki = await steal.reply("```Retrieving Such User Information..```")
