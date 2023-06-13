@@ -13,7 +13,7 @@ from asyncio.exceptions import TimeoutError
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command("sg", "/"))
 
-@Client.on_message(filters.me & filters.command("sg", "/'))
+@Client.on_message(filters.me & filters.command(["sg", "sg"]))
 async def _(client, message):
 
     args = await extract_user(message)
