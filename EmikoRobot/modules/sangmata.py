@@ -10,7 +10,7 @@ from EmikoRobot import ubot2 as ubot
 from asyncio.exceptions import TimeoutError
 
 
-@Client.on_message(filters.user(OWNER._ID) & filters.command("sg", "/"))
+@Client.on_message(filters.user(OWNER_ID) & filters.command("sg", "/"))
 
 @Client.on_message(filters.me & filters.command("sg", PERFIX))
 async def lastname(steal):
