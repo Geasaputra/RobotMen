@@ -10,16 +10,16 @@ from EmikoRobot import ubot2 as ubot
 from asyncio.exceptions import TimeoutError
 
 
-@Client.on_message(filters.user(OWNER._ID) &
-filters.command("sg", "/"))
-@Client.on_message(filters.me & filters.command("sg",PERFIX))
-async def lastname(steal):
+@Client.on_message(filters.user(OWNER._ID) & filters.command("sg", "/"))
+
+@Client.on_message(filters.me & filters.command("sg", PERFIX))
+async def_(client, message):
     steal.pattern_match.group(1)
-    puki = await steal.reply("```Retrieving Such User Information..```")
+    puki = await steal.reply("```SEDANG MENCARI HISTORY NAMA PENGGUNA..```")
     if steal.fwd_from:
         return
     if not steal.reply_to_msg_id:
-        await puki.edit("```Please Reply To User Message.```")
+        await puki.edit("```REPLY PENGGUNA```")
         return
     message = await steal.get_reply_message()
     chat = "@SangMata_beta_bot"
@@ -28,7 +28,7 @@ async def lastname(steal):
     if message.sender.bot:
         await puki.edit("```Reply To Real User's Message.```")
         return
-    await puki.edit("```Please wait...```")
+    await puki.edit("```MEMPROSES...```")
     try:
         async with ubot.conversation(chat) as conv:
             try:
