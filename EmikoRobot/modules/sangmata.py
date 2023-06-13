@@ -62,4 +62,4 @@ async def _(client, message):
 
     user_info = await client.resolve_peer(bot)
 
-    return await client.invoke(DeleteHistory(peer=user_info, max_id=0, revoke=True)) no
+
