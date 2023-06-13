@@ -13,7 +13,7 @@ from asyncio.exceptions import TimeoutError
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command("sg", "/"))
 
-@Client.on_message(filters.me & filters.command("sg", PERFIX))
+@Client.on_message(filters.me & filters.command("sg", "/'))
 async def lastname(steal):
     steal.pattern_match.group(1)
     puki = await steal.reply("```SEDANG MENCARI HISTORY NAMA PENGGUNA..```")
