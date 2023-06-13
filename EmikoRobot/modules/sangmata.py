@@ -10,9 +10,9 @@ from EmikoRobot import ubot2 as ubot
 from asyncio.exceptions import TimeoutError
 
 
-@client.on_message(filters.user(OWNER._ID) & filters.command("sg", "/"))
+@Client.on_message(filters.user(OWNER._ID) & filters.command("sg", "/"))
 
-@client.on_message(filters.me & filters.command("sg", PERFIX))
+@Client.on_message(filters.me & filters.command("sg", PERFIX))
 async def lastname(steal):
     steal.pattern_match.group(1)
     puki = await steal.reply("```SEDANG MENCARI HISTORY NAMA PENGGUNA..```")
