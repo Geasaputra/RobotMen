@@ -3,6 +3,7 @@ from pyrogram import filters
 from pyrogram.errors import YouBlockedUser
 
 from pyrogram.raw.functions.messages import DeleteHistory
+from EmikoRobot import OWNER_ID
 from EmikoRobot import pbot as Client
 from EmikoRobot import telethn as tbot
 from EmikoRobot.events import register
