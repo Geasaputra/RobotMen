@@ -14,53 +14,52 @@ from asyncio.exceptions import TimeoutError
 @Client.on_message(filters.user(OWNER_ID) & filters.command("sg", "/"))
 
 @Client.on_message(filters.me & filters.command("sg", "/'))
-async def lastname(steal):
-    steal.pattern_match.group(1)
-    puki = await steal.reply("```SEDANG MENCARI HISTORY NAMA PENGGUNA..```")
-    if steal.fwd_from:
-        return
-    if not steal.reply_to_msg_id:
-        await puki.edit("```REPLY PENGGUNA```")
-        return
-    message = await steal.get_reply_message()
-    chat = "@SangMata_BOT"
-    user_id = message.sender.id
-    id = f"/search_id {user_id}"
-    if message.sender.bot:
-        await puki.edit("```Reply To Real User's Message.```")
-        return
-    await puki.edit("```MEMPROSES...```")
+async def _(client, message):
+
+    args = await extract_user(message)
+
+    lol = await eor(message, "Sedang Memproses...")
+
+    if args:
+
+        try:
+
+            user = await client.get_users(args)
+
+        except Exception as error:
+
+            return await lol.edit(error)
+
+    bot = "SangMata_BOT"
+
     try:
-        async with ubot.conversation(chat) as conv:
-            try:
-                msg = await conv.send_message(id)
-                r = await conv.get_response()
-                response = await conv.get_response()
-            except YouBlockedUserError:
-                await steal.reply(
-                    "```Error, report to @kenbotsupport```"
-                )
-                return
-            if r.text.startswith("Name"):
-                respond = await conv.get_response()
-                await puki.edit(f"`{r.message}`")
-                await ubot.delete_messages(
-                    conv.chat_id, [msg.id, r.id, response.id, respond.id]
-                ) 
-                return
-            if response.text.startswith("No records") or r.text.startswith(
-                "No records"
-            ):
-                await puki.edit("```I Can't Find This User's Information, This User Has Never Changed His Name Before.```")
-                await ubot.delete_messages(
-                    conv.chat_id, [msg.id, r.id, response.id]
-                )
-                return
-            else:
-                respond = await conv.get_response()
-                await puki.edit(f"```{response.message}```")
-            await ubot.delete_messages(
-                conv.chat_id, [msg.id, r.id, response.id, respond.id]
-            )
-    except TimeoutError:
-        return await puki.edit("`I'm Sick Sorry...`")
+
+        txt = await client.send_message(bot, f"{user.id}")
+
+    except YouBlockedUser:
+
+        await client.unblock_user(bot)
+
+        txt = await client.send_message(bot, f"{user.id}")
+
+    await txt.delete()
+
+    await asyncio.sleep(5)
+
+    await lol.delete()
+
+    async for stalk in client.search_messages(bot, query="History", limit=1):
+
+        if not stalk:
+
+            NotFound = await client.send_message(client.me.id, "Tidak ada komentar")
+
+            await NotFound.delete()
+
+        elif stalk:
+
+            await message.reply(stalk.text)
+
+    user_info = await client.resolve_peer(bot)
+
+    return await client.invoke(DeleteHistory(peer=user_info, max_id=0, revoke=True)) no
