@@ -22,7 +22,7 @@ async def_(client, message):
         await puki.edit("```REPLY PENGGUNA```")
         return
     message = await steal.get_reply_message()
-    chat = "@SangMata_beta_bot"
+    chat = "@SangMata_BOT"
     user_id = message.sender.id
     id = f"/search_id {user_id}"
     if message.sender.bot:
