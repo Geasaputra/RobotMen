@@ -17,9 +17,10 @@ async def sg(client, message):
        except Exception as error:
            return await lol.edit(error)
      bot = "SangMata_BOT"
+     user_id = message.sender.id
+     id =f"/search_id {user_id}"
     
-    
-     try:
+     try message.sender.id:
         txt = await client.send_message(bot, f"{user.id}")
 
     except YouBlockedUser:
