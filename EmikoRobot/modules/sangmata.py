@@ -16,7 +16,8 @@ async def sg(client, message):
           user = await client.get_users(args)
        except Exception as error:
            return await lol.edit(error)
-     bot = "@SangMata_BOT"      
+     bot = "@SangMata_BOT"
+    
      try:
         txt = await client.send_message(bot, f"{user.id}")
 
@@ -27,15 +28,12 @@ async def sg(client, message):
         txt = await client.send_message(bot, f"{user.id}")
 
     await txt.delete()
-
     await asyncio.sleep(5)
-
     await lol.delete()
 
-    async for stalk in client.search_messages(bot, query="History", limit=1):
-
-        if not stalk:
-
+    
+async for stalk in client.search_messages(bot, query="History", limit=1):
+     if not stalk
             NotFound = await client.send_message(client.me.id, "Tidak ada komentar")
 
             await NotFound.delete()
@@ -45,6 +43,11 @@ async def sg(client, message):
             await message.reply(stalk.text)
 
     user_info = await client.resolve_peer(bot)
+    
+    
+
+    
+        
          
         
         
