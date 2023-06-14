@@ -8,13 +8,13 @@ from EmikoRobot import pbot as Client
 from EmikoRobot import telethn as tbot
 from EmikoRobot.events import register
 from EmikoRobot import ubot2 as ubot
-from EmikoRobot import pgram
+
 from asyncio.exceptions import TimeoutError
 
 
 
 
-@pgram.on_message(filters.command("sg"))
+@Client.on_message(filters.command("sg"))
 async def sg(client, message):
 
     response = await extract_user(message)
