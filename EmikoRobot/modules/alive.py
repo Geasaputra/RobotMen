@@ -1,24 +1,30 @@
-import os
-import re
-from platform import python_version as kontol
-from telethon import events, Button
+from pyrogram import __version__ as pyrover
+from pyrogram import filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
-from pyrogram import __version__ as pyrover
-from EmikoRobot.events import register
-from EmikoRobot import telethn as tbot
+
+from FallenRobot import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT, pbot
 
 
+@pbot.on_message(filters.command("alive"))
+async def awake(_, message: Message):
+    TEXT = f"**ʜᴇʏ {message.from_user.mention},\n\nɪ ᴀᴍ {BOT_NAME}**\n━━━━━━━━━━━━━━━━━━━\n\n"
+    TEXT += f"» **DEV :** [Ge](https://t.me/Mamenkuy)\n\n"
+    TEXT += f"» **Library version :** `{telever}` \n\n"
+    TEXT += f"» **Telethon version :** `{tlhver}` \n\n"
+    TEXT += f"» **Pyrogram version :** `{pyrover}` \n━━━━━━━━━━━━━━━━━\n\n"
+    BUTTON = [
+        [
+            InlineKeyboardButton("ʜᴇʟᴘ", url=f"https://t.me/pusatmusic_bot?start=help"),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/PCOgrup"),
+        ]
+    ]
+    await message.reply(
+        caption=TEXT,
+        reply_markup=InlineKeyboardMarkup(BUTTON),
+    )
 
 
-@register(pattern=("/alive"))
-async def awake(event):
-  TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I'm 𝕄𝕌𝕊𝕀ℂ ℂ𝔼ℕ𝕋𝔼ℝ × 𝕄𝔸ℕ𝔸𝔾𝔼** \n\n"
-  TEXT += "⚪ **I'm Working Properly** \n\n"
-  TEXT += f"⚪ **Dev : [GE](https://t.me/Mamenkuy)** \n\n"
-  TEXT += f"⚪ **Library Version :** `{telever}` \n\n"
-  TEXT += f"⚪ **Telethon Version :** `{tlhver}` \n\n"
-  TEXT += f"⚪ **Pyrogram Version :** `{pyrover}` \n\n"
-  TEXT += "**Thanks For Adding Me Here ❤️**"
-  BUTTON = [[Button.url("Help", "https://t.me/Pusatmusic_bot?start=help"), Button.url("Support", "https://t.me/PCOgrup")]]
-  await tbot.send_file(event.chat_id, caption=TEXT,  buttons=BUTTON)
+__mod_name__ = "Aʟɪᴠᴇ"
+        
