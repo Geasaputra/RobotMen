@@ -21,8 +21,8 @@ async def sg(client, message):
     user_id = message.sender.id
     id =f"/search_id {user_id}"
     
-     try:
-        await client.send_message(bot, f"{user.id}")
+     if message.sender.bot:
+        await lol.edit(bot, f"{user.id}")
 
     except YouBlockedUser:
 
