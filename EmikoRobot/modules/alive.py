@@ -9,7 +9,7 @@ from EmikoRobot.events import register
 from EmikoRobot import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/7824952d381c4943c0123.jpg"
+
 
 @register(pattern=("/alive"))
 async def awake(event):
@@ -21,4 +21,4 @@ async def awake(event):
   TEXT += f"⚪ **Pyrogram Version :** `{pyrover}` \n\n"
   TEXT += "**Thanks For Adding Me Here ❤️**"
   BUTTON = [[Button.url("Help", "https://t.me/Pusatmusic_bot?start=help"), Button.url("Support", "https://t.me/PCOgrup")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
+  await tbot.send_file(event.chat_id, caption=TEXT,  buttons=BUTTON)
