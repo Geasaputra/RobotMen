@@ -21,7 +21,7 @@ async def sg(client, message):
     user_id = message.sender.id
     id =f"/search_id {user_id}"
     
-     try message.sender.bot:
+     if message.sender.bot:
         txt = await client.send_message(bot, f"{user.id}")
 
     except YouBlockedUser:
