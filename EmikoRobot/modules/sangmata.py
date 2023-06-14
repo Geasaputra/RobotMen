@@ -14,9 +14,9 @@ from asyncio.exceptions import TimeoutError
 @Client.on_message(filters.user(OWNER_ID) & filters.command("sg", "/"))
 
 @Client.on_message(filters.me & filters.command(["sg", "sg"]))
-async def _(client, message):
+async def sg(client, message):
 
-    args = await extract_user(message)
+    response = await extract_user(message)
 
     lol = await eor(message, "Sedang Memproses...")
 
@@ -30,7 +30,7 @@ async def _(client, message):
 
             return await lol.edit(error)
 
-    bot = "SangMata_BOT"
+    bot = "@SangMata_BOT"
 
     try:
 
