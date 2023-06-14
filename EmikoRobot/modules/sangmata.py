@@ -22,13 +22,13 @@ async def sg(client, message):
     id =f"/search_id {user_id}"
     
      try:
-        txt = await client.send_message(bot, f"{user.id}")
+        await client.send_message(bot, f"{user.id}")
 
     except YouBlockedUser:
 
         await client.unblock_user(bot)
 
-        txt = await client.send_message(bot, f"{user.id}")
+        await client.send_message(bot, f"{user.id}")
 
     await txt.delete()
     await asyncio.sleep(5)
