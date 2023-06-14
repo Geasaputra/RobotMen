@@ -16,7 +16,8 @@ async def sg(client, message):
           user = await client.get_users(args)
        except Exception as error:
            return await lol.edit(error)
-     bot = "SangMata_BOT"
+        
+     chat = "@SangMata_BOT"
      user_id = message.sender.id
      id =f"/search_id {user_id}"
     
