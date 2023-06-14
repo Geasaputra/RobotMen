@@ -20,7 +20,7 @@ async def awake(_, message: Message):
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/PCOgrup"),
         ]
     ]
-    await message.reply(
+    await message.reply_text(
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
     )
