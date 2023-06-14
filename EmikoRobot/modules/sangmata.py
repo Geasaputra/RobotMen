@@ -6,7 +6,7 @@ from pyrogram.raw.functions.messages import DeleteHistory
 from EmikoRobot import OWNER_ID
 from EmikoRobot import pbot as Client
 from EmikoRobot import telethn as tbot
-from EmikoRobot.events import register
+
 from EmikoRobot import ubot2 as ubot
 
 from asyncio.exceptions import TimeoutError
