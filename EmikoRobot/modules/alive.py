@@ -3,6 +3,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
+from EmikoRobot import telethn as tbot
 
 from EmikoRobot import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT, pbot
 
@@ -20,9 +21,10 @@ async def awake(_, message: Message):
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/PCOgrup"),
         ]
     ]
-    await message.reply_text(
+    await tbot.send_file(
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
+        buttons=BUTTON,
     )
 
 
